@@ -1,0 +1,22 @@
+img
+{
+  position: relative;
+  filter: blur(3px);
+  border: solid deeppink 5px;
+  width:50%;
+  margin: 10px 40px auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+img:hover{
+  position: relative;
+  filter: none;
+transform: scale(1.2);
+z-index: 2;
+display: block;
+}

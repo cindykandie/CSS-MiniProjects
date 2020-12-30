@@ -1,0 +1,57 @@
+.accordion{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  background: yellow;
+  border: solid 2px green;
+}
+.accordion__item{
+  display: inline-block;
+}
+.accordion .accordion__content{
+  display: block;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.9s ease,padding 0.2s linear;
+}
+.accordion .accordion__content p{
+  padding: 20px;
+  margin: 0;
+}
+.accordion .accordion__content:target {
+  height: 200px;
+
+}
+.accordion .accordion__trigger{
+  text-decoration: none;
+}
+.accordion .accordion__title{
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  font-size: 1em;
+  background: deeppink;
+  color:rgb(226, 244, 248);
+  border:solid 1px black;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset,
+              0 -1px 0 rgba(255,255,255,0.3),
+              0 4px 0 rgb(211, 205, 205);
+}
+.accordion .accordion__title:hover{
+  background: lightpink;
+}
+.accordion .accordion__title:after{
+  position: absolute;
+  top:calc(50% - 7px);
+  width: 7px;
+  height:7px;
+  content: "";
+  right:20px;
+  border-left:solid 2px white;
+  border-bottom: solid 2px white;
+  transform: rotate(-45deg);
+
+
+}

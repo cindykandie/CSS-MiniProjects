@@ -1,0 +1,51 @@
+body{
+  text-align: center;
+  background-color: #ee7a0d;
+}
+
+.shadow{
+  position: relative;
+  display: inline-block;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color:aqua;
+  transform: skew(-5deg, -5deg) rotate(1deg);
+  transform-origin: center;
+  text-shadow: 3px 3px 0px white, 8px 8px 8px rgba(0,0,0,0.2);
+  filter: drop-shadow(10px 10px 3px rgb(19, 195, 226));
+
+}
+.shadow2{
+        font-family: cursive;
+        position: relative;
+        display: inline-block;
+        font-size: 4rem;
+        text-transform: uppercase;
+        color:hsl(59, 100%, 50%);
+        text-shadow: 3px 3px 0px rgb(20, 77, 73); 
+        filter: drop-shadow(10px 9px 5px black);
+      
+      }
+.shadow3d{
+position: relative;
+display: inline-block;
+font-size: 5rem;
+color: rgb(59, 4, 52);
+text-transform: uppercase;
+-webkit-transform:skew(-5deg, -5deg) rotate(5deg);
+        transform: skew(-5deg, -5deg) rotate(5deg);
+-webkit-transform-origin: center center;
+        transform-origin: center center;
+text-shadow: 1px 1px mediumvioletred,
+             2px 2px mediumvioletred,
+             3px 3px rgb(114, 46, 88),
+             4px 4px rgb(252, 10, 163),
+             5px 5px rgb(218, 147, 192),
+             6px 6px rgb(172, 68, 134),
+             7px 7px mediumvioletred,
+             8px 8px indianred,
+             9px 9px rgb(107, 38, 109),
+             10px 10px rgb(83, 12, 87),
+             11px 11px 20px rgba(209, 243, 243, 0.5);
+
+}

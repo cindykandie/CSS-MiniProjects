@@ -1,0 +1,367 @@
+body{
+text-align:center;
+background-color: #faaae2;
+color: rgb(83, 5, 77);
+padding-bottom: 80px;
+}
+h3{
+  margin-top: 60px;
+}
+/* SIMPLE FACEBOOK STYLE BUTTONS  */
+.fb {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+
+} 
+.fbDark {
+  -moz-box-shadow: inset 0 1px 0 0 #4d73bf;
+  -webkit-box-shadow: inset 0 1px 0 0 #4d73bf;
+  box-shadow: inset 0 1px 0px 0 #4d73bf;
+  background: blue;
+  border: solid 1px blue;
+  color: white;
+  text-shadow: 0 1px 0 purple;
+}
+
+.fbDark:hover {
+  background-color: darkmagenta;
+}
+
+.fbDark:active {
+  background-color: red;
+  border-color: red;
+}
+      
+.fbLight {
+  background: aqua;
+  border: solid 1px yellow;
+  color: black;
+}
+
+.fbLight:hover {
+  background-color: darkmagenta;
+  border-color: red;
+}
+
+/* 3D BUTTONS */
+.rect3d {
+  position: relative;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 15px 24px;
+  font-size: 1.4rem;
+  box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+  outline: none;
+}
+
+.rect3d:hover {
+  background: hsl(16, 100%, 30%);
+}
+
+.rect3d:active {
+  background: hsl(16, 100%, 40%);
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+}
+
+.rect3d::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  border: solid 6px transparent;
+  border-right: solid 6px hsl(16, 100%, 30%);
+  border-left-width: 0px;
+  background: none;
+  top: 0px;
+  left: -6px;
+}
+
+.rect3d::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  border: solid 6px transparent;
+  border-top: solid 6px hsl(16, 100%, 30%);
+  border-bottom-width: 0px;
+  background: none;
+  right: 0px;
+  bottom: -6px;
+}
+
+.rect3d:active::before {
+  border: solid 3px transparent;
+  border-right: solid 3px hsl(16, 100%, 30%);
+  left: -3px;
+  border-left-width: 0px;
+}
+
+.rect3d:active::after {
+  border: solid 3px transparent;
+  border-top: solid 3px hsl(16, 100%, 30%);
+  bottom: -3px;
+  border-bottom-width: 0px;
+}
+
+.circle3d {
+  position: relative;
+  background-color: yellow;
+  background: -webkit-radial-gradient(hsl(54, 100%, 50%),hsl(54, 100%, 40%));
+  background: -moz-radial-gradient(hsl(54, 100%, 50%),hsl(54, 100%, 40%));
+  background: radial-gradient(hsl(54, 100%, 50%),hsl(54, 100%, 40%));
+  background: -o-radial-gradient(hsl(54, 100%, 50%),hsl(54, 100%, 40%));
+  font-size: 1.4rem;
+  text-shadow: 0 -1px blue;
+  color: black;
+  border: solid 1px hsl(54, 100%, 20%);
+  border-radius: 100%;
+  height: 120px;
+  width: 120px;
+  z-index: 4;
+  outline: none;
+  box-shadow: inset 0 1px 0 hsl(54, 100%, 50%),
+                    0 2px 0 hsl(54, 100%, 20%),
+                    0 3px 0 hsl(54, 100%, 18%),
+                    0 4px 0 hsl(54, 100%, 16%),
+                    0 5px 0 hsl(54, 100%, 14%),
+                    0 6px 0 hsl(54, 100%, 12%),
+                    0 7px 0 hsl(54, 100%, 10%),
+                    0 8px 0 hsl(54, 100%, 8%),
+                    0 9px 0 hsl(54, 100%, 6%);
+}
+
+.circle3d:hover {
+  background: -webkit-radial-gradient(hsl(54, 100%, 45%),hsl(54, 100%, 35%));
+  background: -moz-radial-gradient(hsl(54, 100%, 45%),hsl(54, 100%, 35%));
+  background: radial-gradient(hsl(54, 100%, 45%),hsl(54, 100%, 35%));
+  background: -o-radial-gradient(hsl(54, 100%, 45%),hsl(54, 100%, 35%));
+}
+
+.circle3d:active {
+  background: -webkit-radial-gradient(hsl(54, 100%, 43%),hsl(54, 100%, 33%));
+  background: -moz-radial-gradient(hsl(54, 100%, 43%),hsl(54, 100%, 33%));
+  background: radial-gradient(hsl(54, 100%, 43%),hsl(54, 100%, 33%));
+  background: -o-radial-gradient(hsl(54, 100%, 43%),hsl(54, 100%, 33%));
+
+  top:2px;
+  box-shadow: inset 0 1px 0 hsl(54, 100%, 50%),
+                    0 2px 0 hsl(54, 100%, 20%),
+                    0 3px 0 hsl(54, 100%, 18%),
+                    0 4px 0 hsl(54, 100%, 16%),
+                    0 5px 0 hsl(54, 100%, 14%),
+                    0 6px 0 hsl(54, 100%, 12%);
+}
+
+/* GRADIENT BORDERED BUTTONS */
+
+.grad1{
+  position: relative;
+  z-index:1;
+  display: inline-block;
+  padding:20px 40px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  background-color:lightpink;
+  border: solid 10px transparent;
+  border-image: linear-gradient(to top right, orangered,yellow);
+  border-image-slice: 1;
+  color: orangered;
+  transition: color 0.3s ease-in-out;
+}
+.grad1:hover{
+  background-image: linear-gradient(to top right, orangered,yellow);
+  color: white;
+
+}
+.grad2{
+  position: relative;
+  z-index:1;
+  display: inline-block;
+  padding:20px 40px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  background-color:rgb(177, 90, 103);
+  border: solid 10px transparent;
+  border-image: linear-gradient(to right, rgb(122, 58, 37), transparent);
+  border-image-slice: 1;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+.grad2:hover{
+  background-image: linear-gradient(to right, rgb(122, 58, 37),transparent);
+  border-right-style:none;
+  color: white;
+}
+
+/* ANIMATED BUTTONS */
+
+
+
+.spark-1{
+  position: relative;
+  position: inline-block;
+  padding:20px 40px;
+  font-size: 1.5rem;
+  background-color: paleturquoise;
+
+  background-image: url(neatassets/cute.png);
+  background-size: 30px 30px;
+  border: 1px solid purple;
+  font-weight: 700;
+  color: rgb(65, 8, 77);
+}
+.spark-1:hover{
+  animation: moove 1s linear infinite;
+}
+@keyframes moove{
+from{
+  background-position: 0 0;
+}
+to{
+  background-position: 40px 0;
+}
+}
+
+.spark-2{
+  position: relative;
+  position: inline-block;
+  padding:20px 40px;
+  font-size: 1.5rem;
+  background-color: rgb(70, 187, 187);
+
+  background-size: 30px 30px;
+  border: 1px solid purple;
+  font-weight: 700;
+  color: rgb(33, 36, 226);
+  transition: color ease 0.3s;
+}
+
+.spark-2::after{
+ position: absolute;
+ top: 40%; 
+ right: 0.6em;
+ content: ">>>";
+ transition: all ease 0.3s;
+ font-size: 0.9rem;
+ color: black;
+ opacity: 0;
+}
+
+.spark-2:hover{
+  padding: 20px 60px 20px 20px;
+}
+ .spark-2:hover::after{
+  opacity:1;
+  right: 1.2em;
+
+}
+
+
+
+/* TOGGLE SWITCH UI BUTTONS */
+
+
+
+.toggle-1{
+  font-family: cursive, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+}
+.toggle-1-input{
+  display: none;
+}
+.toggle-1-btn{
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: rgb(248, 74, 51);
+  border: solid 1px rgb(248, 248, 6);
+  color:black;
+  width:80px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.toggle-1-btn::before{
+  position: absolute;
+  top:6px;
+  left:38px;
+  content: "off";
+  display: inline-block;
+  height: 20px;
+  padding: 0 3px;
+  background: rgb(17, 16, 16);
+  color: cornsilk;
+  transition: all 0.3s ease;
+}
+
+.toggle-1-input:checked + .toggle-1-btn{
+  background: rgb(112, 63, 228);
+  border: solid 1px rgb(255, 0, 179);
+}
+
+.toggle-1-input:checked + .toggle-1-btn::before{
+  content: "on";
+  left:3px;
+  color: rgb(0, 255, 21);
+}
+.toggle-2{
+  font-family: cursive;
+  font-size: 0.8rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+
+}
+
+.toggle-2-input{
+  display: none;
+}
+
+.toggle-2-btn{
+  position: relative;
+  display: inline-block;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: rgb(248, 245, 245);
+  border:solid 1px gold;
+  color: rgb(7, 7, 10);
+  padding: 5px 10px 5px 30px;
+  transition: all 0.3s ease;
+  cursor:pointer;
+}
+
+.toggle-2-btn::before{
+  position: absolute;
+  content: "";
+  background:#ccc;
+  top:10px;
+  left:10px;
+  display: inline-block;
+  width:10px;
+  height:10px;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.toggle-2-input:checked + .toggle-2-btn{
+background: rgb(252, 4, 4);
+border-color: rgb(180, 83, 83);
+color: rgb(250, 248, 249);
+}
+
+.toggle-2-input:checked + .toggle-2-btn::before{
+background-color: ghostwhite;
+color: deeppink;
+
+}

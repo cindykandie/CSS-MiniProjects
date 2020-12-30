@@ -1,0 +1,97 @@
+*,*::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background: aqua;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 10);
+  grid-template-rows: repeat(6, 50px);
+  padding: 5px;
+  margin: 30px;
+  height: 100vh;
+  width: 900px;
+  max-width: 100%;
+}
+.one {
+  background: mediumslateblue;
+  padding: 16px;
+  grid-column: 1/4;
+  grid-row: 1/4;
+  border: 1px solid white;
+  /* display: grid; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./neatassets/bubblesblue2.jpg);
+}
+
+.two {
+  background: plum;
+  padding: 16px;
+  grid-column: 4/6;
+  grid-row: 1/3;
+  border: 1px solid white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./neatassets/bubblesblue2.jpg);
+}
+
+.three {
+  background: indigo;
+  padding: 16px;
+  grid-column: 1/3;
+  grid-row: 4/7;
+  border: 1px solid white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./neatassets/bubblesblue2.jpg);
+}
+
+.four {
+  background: darkmagenta;
+  padding: 16px;
+  grid-row: 4/5;
+  grid-column: 3/4;
+  border: 1px solid white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./neatassets/bubblesblue2.jpg);
+}
+
+.five {
+  background: deeppink;
+  padding: 16px;
+  grid-column: 4/6;
+  grid-row: 3/5;
+  border: 1px solid white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./neatassets/bubblesblue2.jpg);
+}
+
+.six {
+  background: dodgerblue;
+  padding: 16px;
+  grid-column: 3/6;
+  grid-row: 5/7;
+  border: 1px solid white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./neatassets/bubblesblue2.jpg);
+}

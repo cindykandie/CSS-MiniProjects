@@ -1,0 +1,15 @@
+html, body{
+  height:100%;
+  margin:0;
+}
+.div1{
+  min-height: 100%;
+  margin-bottom: -120px;
+}
+/* .div1::after{
+  content: "";
+  display: block;
+} */
+footer, .div1::after{
+  height: 120px;
+}

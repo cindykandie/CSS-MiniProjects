@@ -1,0 +1,125 @@
+
+
+body{
+  background: yellow;
+}
+.registerWrapper{
+  background-image: -webkit-linear-gradient(135deg, deeppink 30%, fuchsia 75%,  purple 90% );
+  background-image: linear-gradient(135deg, deeppink 30%, fuchsia 75%,  purple 90% );
+  position:relative;
+  z-index:3;
+  padding:200px;
+  color:darkblue;
+  font-size: 1rem;
+}
+.registerWrapper *{
+  box-sizing: border-box;
+
+}
+.registerWrapper form input{
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px;
+  line-height: 50px;
+  height:50px;
+  background: hotpink;
+  border:solid 5px hotpink;
+  border-bottom-width: 3px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  outline: none;
+}
+.registerWrapper form input:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.registerWrapper form input[type="email"]:focus,
+.registerWrapper form input[type="email"]:active,
+.registerWrapper form input[type="password"]:focus,
+.registerWrapper form input[type="password"]:active{
+  border-color: indigo;
+  background: lavender;
+}
+.registerWrapper form input[type="submit"]{
+  position: relative;
+  z-index:1;
+  display: inline-block;
+  padding: 0 20px;
+background-color: purple;
+background-size: 20px 20px;
+background-image: -webkit-linear-gradient(
+                                  45deg,
+                                  rgba(255,255,255,0.15) 25%,
+                                  rgba(0,0,0,0) 25%,
+                                  rgba(0,0,0,0) 50%,
+                                  rgba(255,255,255,0.15) 50%,
+                                  rgba(255,255,255,0.15) 75%,
+                                  rgba(0,0,0,0) 75%,
+                                  rgba(0,0,0,0)
+                                  );
+border: solid 1px rebeccapurple;
+border-bottom-width: 3px;
+color:turquoise;
+cursor: pointer;
+transition: all 0.3s ease;
+-webkit-transition: all 0.3s ease;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.registerWrapper form input[type="submit"]:hover{
+  background-size: 30px 30px;
+}
+.registerWrapper .title{
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  margin:0 0 20px;
+  border-bottom: dashed 2px magenta;
+}
+.registerBlock{
+  position: relative;
+  display:block;
+  width:100%;
+  max-width:300px;
+  margin:0 auto;
+  padding:50px;
+  background: cyan;
+ border-radius: 5px;
+ filter: drop-shadow(.75em .75em .5em);
+}
+
+.registerBlock::before,
+.registerBlock::after{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width:100%;
+  height:100%;
+  content: "";
+  background: cyan;
+  border: solid 1px none;
+  border-radius: 5px;
+  transform: scale(0.9) translate(0,0);
+  -webkit-transform: scale(0.9) translate(0,0);
+  transition: all 0.3s ease;
+}
+.registerBlock:hover::before {
+  -webkit-transform: scale(0.96) translate(0,16px);
+          transform: scale(0.96) translate(0,16px);
+          z-index: -1;
+          /* transition: all 0.3s ease; */
+}
+.registerBlock::after{
+  transition-delay: 0.05s;
+}
+.registerBlock:hover::after{
+  -webkit-transform: scale(0.92) translate(0,32px);
+          transform: scale(0.92) translate(0,32px);
+          z-index: -2;
+          /* transition: all 0.4s ease; */
+
+}

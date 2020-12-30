@@ -1,0 +1,160 @@
+body{
+  background:blue;
+}
+.path{
+  position:relative;
+  width:100%;
+  height:100px;
+  background: #333;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.path::after{
+  content: "";
+  position:absolute;
+  top: 50%;
+  left:5%;
+  display: block;
+  border-top: 12px dotted white;
+  width:90%;
+  margin-top: -6px;
+}
+.pacman{
+  position: absolute;
+  z-index:99;
+  top:50%;
+  left: -20%;
+  animation: moveFoward 7s linear infinite;
+ animation-delay: 1s;
+}
+.pacman::after, .pacman::before{
+  position:absolute;
+  content:'';
+  display: block;
+  height:0;
+  width:0;
+  border: solid 30px yellow;
+  margin-top: -30px;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  animation: mouthTop 0.7s ease infinite;
+
+}
+.pacman::after{
+  border-color: yellow;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  animation: mouthbottom 0.7s ease infinite;
+
+}
+.ghost{
+  position: absolute;
+  z-index:99;
+  top: 50%;
+  left:20%;
+  height:70px;
+  width:60px;
+  margin-top:-35px;
+  animation: moveFoward 7s linear infinite, blinky 0.5s linear infinite;
+background: red;
+border-top-left-radius: 70px;
+border-top-right-radius: 70px;
+}
+.ghost::before, .ghost::after{
+  content: "";
+  position: absolute;
+  background: white;
+  height: 25px;
+  width: 20px;
+  border-radius: 100%;
+  top: 15PX;
+  left: 4PX;
+}
+.ghost::after{
+  left:28px;
+}
+.eyes::after,.eyes::before{
+  content: "";
+  z-index: 99;
+  position: absolute;
+  background: black;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  top: 25px;
+  left: 5px;
+  animation: peeperleft 0.7s linear infinite;
+
+}
+.eyes::after{
+  left:30px;
+  animation: peeperright 0.7s linear infinite;
+
+}
+
+.skirt,.skirt::after,.skirt::before{
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: solid 10px #333;
+  border-top-color: transparent;
+  bottom:-10px;
+}
+.skirt::after{
+  left:30px;
+  content: "";
+
+  }
+  .skirt::before{
+    left:10px;
+    content: "";
+
+}
+@keyframes mouthTop {
+  50%{
+    transform: rotate(44deg);
+  }
+
+}
+@keyframes mouthbottom {
+  50%{
+    transform: rotate(-44deg);
+  }
+
+}
+@keyframes moveFoward {
+  0%{
+    left:-20%;
+  }
+  100%{
+    left:100%;
+
+  }
+}
+@keyframes blinky {
+  50%{
+    background: fuchsia;
+  }
+
+}
+@keyframes peeperleft {
+  0%, 100%{
+    left: 5px;
+  }
+  50%{
+    left:10px;
+    top:20px;
+
+  }
+}
+@keyframes peeperright {
+  0%, 100%{
+    left: 30px;
+  }
+  50%{
+    top:20px;
+    left:34px;
+  }
+}

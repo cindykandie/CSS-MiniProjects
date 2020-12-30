@@ -1,0 +1,135 @@
+.spinner-1{
+  position: relative;
+  display: inline-block;
+  width:64px;
+  height:64px;
+  border-radius: 100%;
+  vertical-align: middle;
+
+}
+.spinner-1::before{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width:64px;
+  height:64px;
+  border-radius: 100%;
+  color: lime;
+  box-shadow: inset -5px 0 0 5px currentColor;
+  clip: rect(0,604px,32px,0);
+  animation: rotator 1s infinite linear;
+}
+
+.spinner-2{
+  position: relative;
+  background-color: darkblue;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  margin: 32px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.spinner-2::after,
+.spinner-2::before{
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.spinner-2::before{
+transform: translateX(-120%);
+transform-origin: 32px 50%;
+animation: orbit-1 1s infinite linear;
+}
+.spinner-2::after{
+transform: translateX(-120%);
+transform-origin: -16px 50%;
+animation: orbit-2 1s infinite linear;
+}
+@keyframes orbit-1 {
+  0%{
+    transform: translateX(-120%) rotate(180deg);
+    background-color: brown;
+
+  }
+  30%{
+    transform: translateX(-120%) rotate(0deg);
+    background-color: slateblue;
+
+  }
+  70%{
+    transform: translateX(-120%) rotate(0deg);
+    background-color: red;
+
+  }
+ 100%{
+  transform: translateX(-120%) rotate(-180deg);
+  background-color: green;
+
+}
+}
+@keyframes orbit-2 {
+0%{
+  transform: translateX(120%) rotate(180deg);
+  background-color: blue;
+}
+30%{
+  transform: translateX(120%) rotate(0deg);
+  background-color: yellow;
+
+}
+70%{
+  transform: translateX(120%) rotate(0deg);
+  background-color: pink;
+
+}
+100%{
+transform: translateX(120%) rotate(-180deg);
+background-color: deeppink;
+
+}
+}
+
+/* @keyframes orbit-1 {
+  0%{
+    transform: translateX(-120%) rotate(180deg);
+  }
+ 100%{
+  transform: translateX(-120%) rotate(-180deg);
+}}
+@keyframes orbit-2 {
+  0%{
+    transform: translateX(120%) rotate(180deg);
+  }
+100%{
+  transform: translateX(-120%) rotate(-180deg);
+}
+} */
+@keyframes rotator {
+  0%{
+    transform: rotate(-180deg);
+    box-shadow: inset -5px 0 0 5px currentColor;
+    color: blue;
+
+
+  }
+50%{
+  transform: rotate(0deg);
+  box-shadow: inset -1px 0 0 1px currentColor;
+  color: yellow;
+
+
+}
+  100%{
+    transform: rotate(180deg);
+    box-shadow: inset -5px 0 0 5px currentColor;
+    color: purple;
+
+
+  }
+}
